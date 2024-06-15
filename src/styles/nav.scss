@@ -1,0 +1,55 @@
+.nav {
+  height           : var(--app-header-height);
+  position         : absolute;
+  width            : 100%;
+  background-color : var(--background-color);
+  font-family      : var(--font-family), serif;
+  border-bottom    : 1px solid var(--brand-color);
+
+  .nav-container {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    height          : 100%;
+    width           : 100%;
+    max-width       : 1200px;
+    margin          : 0 auto;
+
+    h1 {
+      font-size   : 1.8rem;
+      color       : var(--text-color);
+      margin-left : 0;
+    }
+
+    ul {
+      list-style      : none;
+      display         : flex;
+      justify-content : end;
+      align-items     : center;
+      height          : 100%;
+      margin-top: 15px;
+
+      .nav-button {
+        display          : block;
+        margin-left           : 20px;
+        background-color : var(--background-color);
+        padding          : 15px;
+        border-radius    : 5px;
+        //border           : 1px solid var(--brand-color);
+        cursor           : pointer;
+        color            : var(--brand-color);
+        font-size        : 1em;
+        font-weight      : 600;
+
+        a {
+          text-decoration : none;
+        }
+      }
+
+      .nav-button:hover {
+        color            : var(--background-color-500);
+        background-color : var(--brand-color-400);
+      }
+    }
+  }
+}

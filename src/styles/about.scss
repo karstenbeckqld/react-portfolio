@@ -1,0 +1,66 @@
+#about {
+  margin-top : 180px;
+
+  .about-section {
+    position : relative;
+
+    .self {
+      position  : absolute;
+      left      : 50%;
+      top       : -50%;
+      transform : translateX(-50%) translateY(30%);
+
+      .self-image {
+        width         : 10rem;
+        border-radius : 50%;
+        border        : 3px solid var(--brand-color-500);
+        z-index       : 2;
+      }
+    }
+
+
+    .about-container {
+      padding          : 1.2rem;
+      border-radius    : 15px;
+      background-color : var(--highlight-color-500);
+      //border        : 1px solid var(--brand-color-500);
+      margin-top       : -50px;
+      z-index          : 1;
+      color            : var(--text-color-grey);
+
+      .overview {
+        margin-bottom : 40px;
+
+        .skills-display {
+          display     : flex;
+          align-items : center;
+          gap         : 5px;
+        }
+      }
+
+    }
+  }
+}
+
+.offset {
+  margin : -4px 5px 0 0;
+}
+
+.emphasis {
+  color : var(--brand-color-500);
+}
+
+.cursor {
+  display   : inline-block;
+  width     : 1ch;
+  animation : blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity : 0;
+  }
+  50% {
+    opacity : 1;
+  }
+}

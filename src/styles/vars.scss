@@ -1,0 +1,58 @@
+// Global variables
+
+:root {
+  $brand-color            : #5eead4; //#6faaa7; //#0ece03 #E4AA48, #67bdf1
+  $background-color       : #131313; //#101a30;
+  $highlight-colour       : #111725;
+  $highlight-colour-rgba  : rgb(17, 23, 37);
+  $brand-color-rgba       : rgb(94, 234, 212);
+  $blue                   : #095cb5;
+
+  --brand-color           : #{$brand-color};
+  --highlight-colour      : #{$highlight-colour};
+  --highlight-colour-rgba : #{$highlight-colour-rgba};
+  --brand-color-rgba      : #{$brand-color-rgba};
+  --background-color      : #{$background-color};
+  --blue                  : #{$blue};
+  --blue-hover            : #{darken($blue, 15%)};
+  --text-color-grey       : #6D7078;
+  --text-color-dark       : #1a1a1a;
+
+  --white                 : #fff;
+  --black                 : #000;
+
+  --accent-font           : 'DM Mono', monospace;
+  --font-family           : 'Poppins', sans-serif;
+
+  --app-header-height     : 100px;
+
+  --brand-color-100       : #{lighten($brand-color, 40%)};
+  --brand-color-200       : #{lighten($brand-color, 30%)};
+  --brand-color-300       : #{lighten($brand-color, 20%)};
+  --brand-color-400       : #{lighten($brand-color, 10%)};
+  --brand-color-500       : #{$brand-color};
+  --brand-color-600       : #{darken($brand-color, 10%)};
+  --brand-color-700       : #{darken($brand-color, 20%)};
+  --brand-color-800       : #{darken($brand-color, 30%)};
+  --brand-color-900       : #{darken($brand-color, 40%)};
+
+  --background-color-100  : #{lighten($background-color, 40%)};
+  --background-color-200  : #{lighten($background-color, 30%)};
+  --background-color-300  : #{lighten($background-color, 20%)};
+  --background-color-400  : #{lighten($background-color, 10%)};
+  --background-color-500  : #{$background-color};
+  --background-color-600  : #{darken($background-color, 10%)};
+  --background-color-700  : #{darken($background-color, 20%)};
+  --background-color-800  : #{darken($background-color, 30%)};
+  --background-color-900  : #{darken($background-color, 40%)};
+
+  --highlight-color-100   : #{lighten($highlight-colour, 40%)};
+  --highlight-color-200   : #{lighten($highlight-colour, 30%)};
+  --highlight-color-300   : #{lighten($highlight-colour, 20%)};
+  --highlight-color-400   : #{lighten($highlight-colour, 10%)};
+  --highlight-color-500   : #{$highlight-colour};
+  --highlight-color-600   : #{darken($highlight-colour, 10%)};
+  --highlight-color-700   : #{darken($highlight-colour, 20%)};
+  --highlight-color-800   : #{darken($highlight-colour, 30%)};
+  --highlight-color-900   : #{darken($highlight-colour, 40%)};
+}

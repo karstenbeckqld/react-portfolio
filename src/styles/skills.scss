@@ -1,0 +1,38 @@
+.skills-section {
+
+  .skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+
+  .skill{
+    display: block;
+    flex: 0 0 15%;
+    width: 15%;
+    max-width: 15%;
+    padding: 1rem;
+    background-color: var(--highlight-color-500);
+    ////display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+    border-radius: 10px;
+    height: 150px;
+
+    .skill-image{
+      display: block;
+      height: 3rem;
+      margin: 20px auto 0 auto;
+    }
+
+    p{
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+}
