@@ -23,16 +23,6 @@ export default function Navigation() {
         }
     }
 
-    // const scrollDown = (ref: MutableRefObject<HTMLDivElement | null>) => {
-    //     if (ref.current) {
-    //         window.scrollTo({
-    //             top: ref.current.offsetTop,
-    //             behavior: 'smooth',
-    //         });
-    //     }
-    //
-    // };
-
     return (
         <nav className="nav">
             <div className='nav-container'>

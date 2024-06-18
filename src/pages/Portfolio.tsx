@@ -6,7 +6,7 @@ export default function Portfolio() {
     const [currentData, setCurrentData] = useState<Data[] | null>(null);
 
     async function getData() {
-        const response = await fetch('http://localhost:3000/data', {
+        const response = await fetch('https://kb-portfolio-backend-b5b767739245.herokuapp.com/data', {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         });

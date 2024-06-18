@@ -5,6 +5,7 @@ import Portfolio from "./Portfolio.tsx";
 import Contact from "./Contact.tsx";
 import React from "react";
 import {SlIconButton} from "@shoelace-style/shoelace/dist/react";
+import Footer from "../components/Footer.tsx";
 
 
 export default function Home() {
@@ -12,13 +13,25 @@ export default function Home() {
     const [open, setOpen] = React.useState(false);
 
     function handleMenuClick(ref: string) {
+
         setOpen(false);
+
         let scrollElement: HTMLElement | null = null;
+
         if (ref) {
             scrollElement = document.getElementById(ref);
         }
+
         if (scrollElement) {
-            scrollElement.scrollIntoView({ behavior: "smooth" });
+
+            if (scrollElement.title === 'home') {
+                window.scroll({
+                    top: 100,
+                    behavior: "smooth"
+                });
+            }
+
+            scrollElement.scrollIntoView({behavior: "smooth"});
         } else {
             console.warn(`Element with id ${ref} not found`);
         }
@@ -76,11 +89,12 @@ export default function Home() {
                     </nav>
 
                     <div id="home"></div>
-                    <div id="about"><About /></div>
+                    <div id="about"><About scrollTo={()=>handleMenuClick('contact')} /></div>
                     <div id="skills"><Skills /></div>
                     <div id="education"><Education /></div>
                     <div id="portfolio"><Portfolio /></div>
                     <div id="contact"><Contact /></div>
+                    <Footer/>
                 </div>
             </div>
         </>

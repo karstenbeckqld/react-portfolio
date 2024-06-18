@@ -1,0 +1,61 @@
+footer {
+  height          : 100px;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  gap             : 1rem;
+
+  .footer-paragraph {
+    height : 40px;
+
+    p {
+      margin-top : 3px;
+
+      a {
+        color : var(--white);
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color : var(--brand-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .image-container {
+    display : inline-block;
+    height  : 40px;
+
+    .footer-logo {
+      animation : logo-spin infinite 20s linear;
+      display   : block;
+    }
+  }
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform : rotate(0deg);
+  }
+  to {
+    transform : rotate(360deg);
+  }
+}
+
+@media screen and (max-width : 400px) {
+  footer {
+    flex-direction : column;
+    gap            : 0.5rem;
+
+    .footer-paragraph {
+      height : 20px;
+    }
+  }
+
+  .image-container {
+    margin-bottom : 40px;
+    margin-top    : 10px;
+  }
+}

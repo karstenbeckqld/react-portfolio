@@ -1,4 +1,6 @@
 import {Data} from "../context/DataContext";
+import {FaExternalLinkAlt, FaGithub} from "react-icons/fa";
+import {MdOutlineWebAsset} from "react-icons/md";
 
 type TPortfolioItemProps = {
     index: number;
@@ -19,8 +21,12 @@ export default function PortfolioItem({index, item}: TPortfolioItemProps) {
     return (
 
             <div className="portfolio-item">
-                <div key={index}>
-                    <h3>{item.title}</h3>
+                <div className="portfolio-item-content" key={index}>
+                    <div className="portfolio-item-title">
+                        {item.type == 'w' ? <MdOutlineWebAsset className="git-icon" /> : <FaGithub className="git-icon" />}
+                        <h3>{item.title} <a href={item.link} target="_blank"> <FaExternalLinkAlt className="link-icon" /></a></h3>
+                    </div>
+
 
                     <div className="showcase-image-container"><img
                         className="showcase-image"
@@ -32,7 +38,7 @@ export default function PortfolioItem({index, item}: TPortfolioItemProps) {
                         {item.tech.map((techItem, index) => {
                             return (
                                 <div key={index}>
-                                    <div className="tech-item"> {techItem}</div>
+                                    <div className="tech-item"> #{techItem}</div>
                                 </div>
                             )
                         })}

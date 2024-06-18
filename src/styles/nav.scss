@@ -2,9 +2,8 @@
   height           : var(--app-header-height);
   position         : absolute;
   width            : 100%;
-  background-color : var(--background-color);
+  background-color : var(--navbar-color);
   font-family      : var(--font-family), serif;
-  border-bottom    : 1px solid var(--brand-color);
 
   .nav-container {
     display         : flex;

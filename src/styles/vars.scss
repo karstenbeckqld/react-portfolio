@@ -1,11 +1,11 @@
 // Global variables
 
 :root {
-  $brand-color            : #5eead4; //#6faaa7; //#0ece03 #E4AA48, #67bdf1
+  $brand-color            : #114cd7; //#6faaa7; //#0ece03 #E4AA48, #67bdf1
   $background-color       : #131313; //#101a30;
   $highlight-colour       : #111725;
   $highlight-colour-rgba  : rgb(17, 23, 37);
-  $brand-color-rgba       : rgb(94, 234, 212);
+  $brand-color-rgba       : rgb(17, 76, 215);
   $blue                   : #095cb5;
 
   --brand-color           : #{$brand-color};
@@ -16,7 +16,9 @@
   --blue                  : #{$blue};
   --blue-hover            : #{darken($blue, 15%)};
   --text-color-grey       : #6D7078;
+  --text-color-light-grey : #9699a4;
   --text-color-dark       : #1a1a1a;
+  --navbar-color          : #1F1F1F;
 
   --white                 : #fff;
   --black                 : #000;
@@ -24,7 +26,7 @@
   --accent-font           : 'DM Mono', monospace;
   --font-family           : 'Poppins', sans-serif;
 
-  --app-header-height     : 100px;
+  --app-header-height     : 50px;
 
   --brand-color-100       : #{lighten($brand-color, 40%)};
   --brand-color-200       : #{lighten($brand-color, 30%)};

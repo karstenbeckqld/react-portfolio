@@ -1,29 +1,31 @@
 .app-header {
-  background  : var(--header-background);
-  position    : fixed;
-  top         : 0;
-  right       : 0;
-  left        : 0;
-  height      : var(--app-header-height);
-  color       : var(--brand-colour);
-  display     : flex;
-  z-index     : 9;
-  box-shadow  : 4px 0 10px rgba(94, 234, 212,0.5);
-  align-items : center;
-  padding     : 0 20px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid var(--brand-colour);
+  background    : var(--navbar-color);
+  position      : fixed;
+  top           : 0;
+  right         : 0;
+  left          : 0;
+  height        : var(--app-header-height);
+  color         : var(--brand-colour);
+  display       : flex;
+  z-index       : 9;
+  //box-shadow  : 4px 0 10px rgba(94, 234, 212,0.5);
+  align-items   : center;
+  padding       : 0 20px;
 
   .app-header-main {
-    flex-grow   : 1;
-    display     : flex;
-    align-items : center;
-    justify-content: space-between;
+    flex-grow       : 1;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
   }
 
-  .app-logo{
-    display : flex;
-    align-items: center;
+  h2 {
+    margin-top : 5px;
+  }
+
+  .app-logo {
+    display     : flex;
+    align-items : center;
   }
 
   .app-header-main::slotted(h1) {
@@ -40,147 +42,25 @@
   }
 
   .app-logo img {
-    width        : 50px;
+    width        : 30px;
     margin-right : 20px;
   }
 
   .hamburger-btn::part(base) {
     color      : var(--white);
-    margin-top : -13px;
-  }
-
-  .app-top-nav {
-    display        : flex;
-    flex-direction : row;
-    height         : 100%;
-    align-items    : center;
-
-    .nav-menu {
-
-      display        : flex;
-      flex-direction : row;
-      gap            : 20px;
-      padding        : .8em;
-      list-style     : none;
-
-      .nav-item {
-        display   : inline-block;
-        font-size : 1.2em;
-        cursor    : pointer;
-        padding   : .8em;
-
-
-        .nav-link {
-          color           : var(--brand-color);
-          text-decoration : none;
-          padding         : .8em;
-          cursor          : pointer;
-        }
-
-        a {
-          display         : inline-block;
-          padding         : .8em;
-          text-decoration : none;
-          color           : var(--brand-color);
-        }
-
-        a:hover {
-          background-color : var(--brand-color);
-          color            : var(--background-color);
-        }
-
-        .hamburger-btn::part(base) {
-          font-size : 1.5em;
-          width     : 40px;
-        }
-      }
-
-      .nav-item:hover {
-        color            : var(--background-color);
-        background-color : var(--brand-color);
-      }
-    }
+    margin-top : -5px;
   }
 }
-
-.app-side-menu{
-  z-index: 99;
-}
-
-.app-side-menu::part(body) {
-  background-color: var(--background-color);
-}
-
-
-.app-side-menu-items {
-  margin-top : 6em;
-}
-
-.app-side-menu-items a {
-  display         : block;
-  padding         : .5em;
-  text-decoration : none;
-  font-size       : 1.3em;
-  color: var(--white);
-}
-
-.app-side-menu-items a:hover {
-  background: var(--background-color-400);
-  color: var(--white);
-  font-weight: 600;
-}
-
-.app-side-menu-logo {
-  width         : 60px;
-  margin-bottom : 2em;
-  position      : absolute;
-  top           : 2em;
-  left          : 1.5em;
-}
-
-
-  /* active nav links */
-  .app-top-nav a.active,
-  .app-side-menu-items a.active {
-    font-weight : bold;
-  }
-
-  /* RESPONSIVE - MOBILE ------------------- */
-  @media all and (max-width : 930px) {
-
-    .app-top-nav {
-      display : none;
-    }
-  }
-
-  @media screen and (max-width : 550px) {
-
-    .page-title {
-      display : none;
-    }
-  }
 
 
 /* ------------------------------------------------------------------------------------------------------------------ */
-/*                                               Navigation styles                                                    */
+/*                                               Side Nav styles                                                    */
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 /* The navigation is a full-height side navigation that extends into the screen depending on the viewport width. On wide
 screens the navigation extends 50%, on medium screen 80% and on small screens 100%. This behaviour is controlled by
 JavaScript that check te viewport width upon clicking the hamburger menu button. If the user clicks on a link, we
 dynamically add the open and close selectors below.*/
-
-/* The navBg selector styles the hamburger menu button that opens the navigation in the top right corner of the page. */
-.navBg {
-  width            : 90px;
-  height           : 90px;
-  background-color : var(--brand-colour);
-  position         : fixed;
-  right            : 0;
-  top              : 0;
-  border-radius    : 0 0 0 100%;
-  z-index          : 90;
-}
 
 /* The sidenavButton selector styles the 'x' to close the side navigation. */
 .sidenavButton {
@@ -204,8 +84,8 @@ dynamically add the open and close selectors below.*/
   z-index          : 99;
   top              : 0;
   right            : 0;
-  background-color : var(--brand-color);
-  color            : var(--background-color);
+  background-color : var(--navbar-color);
+  color            : var(--white);
   overflow-x       : hidden;
   transition       : 0.5s;
   padding-top      : 60px;
@@ -224,17 +104,22 @@ dynamically add the following two classes with JS. They simply translate the sid
 }
 
 /* The following are general styles for the navigation. */
+
+.sidenav ul {
+  margin-left : -30px;
+}
 .sidenav li {
   list-style : none;
 }
 
 .sidenav a {
-  padding         : 0 0 10px 0;
+  padding         : 5px 0 10px 30px;
   text-decoration : none;
   font-size       : 1.2em;
   color           : var(--background-color);
   display         : block;
   transition      : 0.3s;
+  cursor          : pointer;
 }
 
 .sidenav a:hover {
@@ -248,6 +133,7 @@ dynamically add the following two classes with JS. They simply translate the sid
 }
 
 .sidenav .closeButton {
+  color: var(--brand-color);
   position  : absolute;
   top       : -50px;
   right     : 25px;
@@ -257,11 +143,28 @@ dynamically add the following two classes with JS. They simply translate the sid
 }
 
 .sidenav .closeButton:hover {
-  background-color : var(--brand-color) !important;
+  background-color : var(--navbar-color) !important;
+  color: var(--white);
 }
 
 /* The navigation consists of three sections, navTop, navMiddle and navBottom. */
 .navTop {
   flex     : 0 0 38%;
   position : relative;
+}
+
+@media screen and (max-width : 810px) {
+  .sidenav {
+    width            : 50%;
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width : 460px) {
+  .sidenav {
+    width            : 80%;
+  }
 }

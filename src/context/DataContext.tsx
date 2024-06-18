@@ -8,6 +8,7 @@ export type Data = {
     link: string;
     description: string;
     tech: string[];
+    type: string;
 }
 
 export type DataContextType = {

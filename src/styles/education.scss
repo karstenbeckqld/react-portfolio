@@ -12,17 +12,17 @@
     .education {
       margin-left   : 20px;
       margin-bottom : -16px;
-      border-left   : 1px solid var(--brand-color-500);
+      border-left   : 1px solid var(--text-color-grey);
 
       h3 {
         margin-top  : 10px;
         margin-left : 18px;
         color       : var(--background-color-100);
-        font-size   : 1.3rem;
+        font-size   : 1.2rem;
       }
 
       h4 {
-        color         : var(--brand-color-500);
+        color         : var(--brand-color-300);
         font-size     : 1rem;
         margin-bottom : 0;
         margin-top    : -5px;
@@ -37,7 +37,7 @@
         .circle {
           margin-top       : -5px;
           margin-right     : 10px;
-          color            : var(--brand-color-500);
+          color            : var(--brand-color-300);
           background-color : var(--background-color-500);
         }
       }

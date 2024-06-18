@@ -1,9 +1,8 @@
-#portfolio {
 
   .portfolio-section {
-    width           : 100%;
-    display: flex;
-    flex-direction: column;
+    width          : 100%;
+    display        : flex;
+    flex-direction : column;
 
 
     .portfolio-container {
@@ -17,7 +16,7 @@
 
     .portfolio-item {
       width            : 350px;
-      height: 355px;
+      height           : 355px;
       display          : flex;
       flex-direction   : column;
       align-items      : center;
@@ -26,8 +25,37 @@
       background-color : var(--highlight-color-500);
       margin           : 1rem;
       padding          : 1rem;
-      //border         : 1px solid #ccc;
       border-radius    : 5px;
+
+      .portfolio-item-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .git-icon,
+        .link-icon {
+          margin-top: -5px;
+          font-size: 1.1rem;
+        }
+
+        .link-icon {
+          color: var(--brand-color-200);
+          margin-left: 10px;
+        }
+
+        .link-icon:hover {
+          color: var(--brand-color-500);
+          cursor: pointer;
+        }
+
+
+
+        h3 {
+        font-size  : 1.1rem;
+        color      : var(--white);
+      }
+      }
 
       h2 {
         text-align    : center;
@@ -35,31 +63,26 @@
         margin-bottom : 20px;
       }
 
-      h3{
-        font-size: 1.2rem;
-        color: var(--white);
-        text-align: center;
-      }
+
 
       .technology {
         width           : 100%;
         display         : flex;
-        justify-content : center;
+        justify-content : flex-start;
         align-items     : center;
-        margin          : 0.5rem;
+        margin          : 1rem 0 0 0;
         flex-wrap       : wrap;
 
         .tech-item {
           font-size        : 0.75rem;
           text-align       : center;
-          width            : 80px;
           display          : inline-block;
-          background-color : rgb(19, 78, 74, .5); //rgba(94, 234, 212, 0.2);;
-          border-radius    : 9999px;
+          background-color : rgb(17, 76, 215, 0.3);
+          border-radius    : 10px;
           //border           : 1px solid var(--brand-color);
-          color            : rgba(94, 234, 212, 1); //var(--brand-color);
-          padding          : 5px;
-          margin           : 5px 5px 0 5px;
+          color            : var(--highlight-colour-200);
+          padding          : 8px;
+          margin           : 5px 5px 0 0;
         }
       }
 
@@ -77,6 +100,19 @@
     }
   }
 
+  @media screen and (max-width: 800px) {
+    .portfolio-section {
+      .portfolio-item {
+        width            : 45%;
+      }
+    }
+  }
 
-}
+  @media screen and (max-width: 680px) {
+    .portfolio-section {
+      .portfolio-item {
+        width            : 100%;
+      }
+    }
+  }
 

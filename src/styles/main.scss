@@ -46,7 +46,12 @@ body {
   margin    : 0 auto;
 }
 
-#home, #about, #skills, #education, #portfolio, #contact {
+#home {
+  margin-top: var(--app-header-height);
+  height: 50px;
+}
+
+#about, #skills, #education, #portfolio, #contact {
   // background-color : var(--highlight-color-500);
   padding    : 20px;
   width      : 100%;
@@ -63,5 +68,4 @@ body {
     margin-bottom: 2rem;
     text-transform: uppercase;
   }
-
 }
